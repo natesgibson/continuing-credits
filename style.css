@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo|Oxygen|Poppins|Lora|Open+Sans');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+header {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    width: calc(100% - 2rem); /* = 100% width - padding */
+    padding-top: 1.75em;
+    padding-bottom: 2.5em;
+    background-color: #0389f3;
+    color: WHITE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.05rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+    text-shadow: BLACK 2px 1px;
+}
+
+header h2 {
+    font-size: 0.95rem;
+    text-shadow: BLACK 1px 1px;
+}
+
+nav {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    background-color: #777f8a;
+    border-bottom: 1px groove LIGHTGREY;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    margin-right: 1rem;
+    padding: 0.85rem;
+    text-align: center;
+    color: WHITE;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: BLACK;
+    text-decoration: none;
+}
+
+nav a:active {
+    transform: translateY(2px);
+}
+
+@media (max-width: 750px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 1.25rem;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+}
+
+.current-page {
+    background-color: #00000026;
+}
+
+main {
+    margin: 1rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: WHITE;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media (max-width: 1000px) {
+    main {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+main h1 {
+    margin-top: 0.75em;
+    margin-bottom: 2em;
+    padding-top: 0.35em;
+    padding-bottom: 0.35em;
+    border-top: 1px solid SLATEGREY;
+    border-bottom: 1px solid SLATEGREY;
+    text-align: center;
+    width: 100%;
+}
+
+main p {
+    margin-top: 0.75em;
+}
+
+footer {
+    background-color: #0389f3;
+    padding: 1rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:active {
+    color: darkblue;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:after {
+    color: purple;
+}
+
+/* for sticky footer */
+#container {
+    margin-bottom: 5rem;
+    min-height: calc(100vh - 8.5rem); /* = 100% viewport - (bottom margin + footer padding[x2] + footer height) */
+}
+
+button {
+    background-color: WHITE;
+    border: 2px solid #0389f3;
+    color: BLACK;
+    padding: .75em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0389f3;
+    color: WHITE;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.error_text {
+    color: blue;
+    font-size: 1.25em;
+}
+
+
+
+
+/* COURSES Page (index.html) */
+.course {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 4em); /* width - padding */
+    max-width: 100%;
+    border: 1.5px solid BLACK;
+    border-radius: 20px;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+}
+
+.course > * {
+    margin-bottom: 1.5rem;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.course_title {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 100%;
+    margin-bottom: 1.75rem;
+}
+
+.course_title > * {
+    font-size: 2.5em;
+}
+
+.course_title strong {
+    color: RED;
+    margin-left: 1em;
+    font-size: 2em;
+}
+
+.course img {
+    margin-bottom: 2em;
+    max-width: 100%;
+}
+
+.course h3 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.course .description {
+    width: 90%;
+}
+
+.course .credit {
+    font-weight: bold;
+    font-size: 1.125em;
+}
+
+.course .course_dates {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+}
+
+.course_dates > * {
+    font-size: 1.125em;
+}
+
+.course .dates {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.course .date_label {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.course .extra_credit {
+    margin-top: 1rem;
+    width: 90%;
+}
+
+.course .ec_pp_btn {
+    margin-bottom: .5rem;
+}
+
+.course .closed_text {
+    color: red;
+}
+
+.error_text a {
+    color: red;
+}
+
+
+
+/* REGISTER NOW! Page */
+.register #location {
+    display: none;
+}
+
+.register #date {
+    margin-top: 0;
+    margin-bottom: 2em;
+    display: none;
+}
+
+.register #type {
+    display: none;
+}
+
+.register #continue {
+    display: none;
+}
+
+.register #reg_confirm {
+    display: none;
+}
+
+.register #pay_options {
+    display: none;
+}
+
+.register h2 {
+    margin-bottom: 2rem;
+}
+
+.register h3 {
+    margin-bottom: 0.5rem;
+}
+
+.register p {
+    font-size: 1.25rem;
+}
+
+.register form {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.register button {
+    margin-right: 1rem;
+    margin-top: 3rem;
+    width: 110px;
+}
+
+.register #closed {
+    display: none;
+    color: red;
+}
+
+
+
+
+/* SPECIAL DEAL CLUB Page */
+.AW-Form-1060913952, .AW-Form-1253731808 {
+    width: 100%;
+}
+
+.af-form {
+    margin-left: 0% !important;
+}
+
+.deal_club h2 {
+    margin-bottom: 1rem;
+}
+
+.deal_club p, .deal_club ul {
+    margin-bottom: 1.25rem;
+}
+
+#instructions {
+    margin-bottom: 3rem;
+}
+
+
+
+/* DIRECTIONS Page */
+#directions_spokane {
+    display: none;
+}
+
+.switch {
+	display: flex;
+	overflow: hidden;
+    align-self: center;
+    margin-bottom: 2.5em;
+}
+
+.directions .switch {
+    margin-top: -2em;
+}
+
+.switch input {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+.switch label {
+	background-color: #e4e4e4;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 1.5rem;
+	line-height: 1;
+	text-align: center;
+	padding: 8px 16px;
+	margin-right: -1px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+	transition: all 0.1s ease-in-out;
+}
+
+.switch label:hover {
+	cursor: pointer;
+}
+
+.switch input:checked + label {
+	background-color: #33a0f7cf;
+	box-shadow: none;
+}
+
+.switch label:first-of-type {
+	border-radius: 4px 0 0 4px;
+}
+
+.switch label:last-of-type {
+	border-radius: 0 4px 4px 0;
+}
+
+iframe {
+    display: block;
+    width: 90%;
+    height: 450px;
+    overflow: hidden;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+ol {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+li {
+    margin-bottom: .2em;
+}
+
+
+
+
+/* RESOURCES Page */
+.resources {
+    padding: 1em;
+    padding-top: 0;
+}
+
+main > .resources {
+    align-self: flex-start;
+}
+
+.resources li {
+    margin-bottom: 0.5em;
+}
+
+.resources p {
+    display: inline;
+}
+
+.resources h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    text-decoration: underline;
+}
+
+.resources h3 {
+    margin-bottom: 0.25em;
+}
+
+.course-rec {
+    margin-bottom: 1em;
+    margin-left: 1.5em;
+}
+
+#curr-courses {
+    border-bottom: 1px solid LIGHTGREY;
+    margin-bottom: 1rem;
+}
+
+
+
+
+/* ABOUT US Page */
+#profile {
+    margin-bottom: 3em;
+    padding-bottom: 3em;
+    border-bottom: 1px solid LIGHTGREY;
+}
+
+#profile-pic {
+    height: 11em;
+    border: 2px solid SLATEGREY;
+    margin-right: 1em;
+    float: left;
+}
+
+#profile h2 {
+    word-wrap: normal;
+    display: block;
+}
+
+@media (max-width: 500px) {
+    #profile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #profile h2 {
+        margin-top: 1rem;
+    }
+}
